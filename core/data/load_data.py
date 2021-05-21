@@ -41,9 +41,9 @@ class DataSet(Data.Dataset):
         # Loading question word list
         self.stat_ques_list = \
             json.load(open(__C.QUESTION_PATH['train'], 'r'))['questions'] + \
-            json.load(open(__C.QUESTION_PATH['val'], 'r'))['questions'] + \
-            json.load(open(__C.QUESTION_PATH['test'], 'r'))['questions'] + \
-            json.load(open(__C.QUESTION_PATH['vg'], 'r'))['questions']
+            json.load(open(__C.QUESTION_PATH['val'], 'r'))['questions'] # + \
+            # json.load(open(__C.QUESTION_PATH['test'], 'r'))['questions'] + \
+            # json.load(open(__C.QUESTION_PATH['vg'], 'r'))['questions']
 
         # Loading answer word list
         # self.stat_ans_list = \

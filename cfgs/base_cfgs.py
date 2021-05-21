@@ -70,7 +70,7 @@ class Cfgs(PATH):
         }
 
         # A external method to set train split
-        self.TRAIN_SPLIT = 'train+val+vg'
+        self.TRAIN_SPLIT = 'train'
 
         # Set True to use pretrained word embedding
         # (GloVe: spaCy https://spacy.io/)
@@ -183,7 +183,7 @@ class Cfgs(PATH):
 
 
     def proc(self):
-        assert self.RUN_MODE in ['train', 'val', 'test']
+        assert self.RUN_MODE in ['train', 'val']
 
         # ------------ Devices setup
         os.environ['CUDA_VISIBLE_DEVICES'] = self.GPU
